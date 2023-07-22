@@ -1,23 +1,22 @@
 class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
-        int lb=1;
-        int ub=nums.size()-1;
-        int cnt;
-        while(lb<=ub)
+         int s = (nums.size());
+        int x[s];
+        for(int i=0;i<s;i++)
         {
-            int mid = lb + (ub - lb) / 2;
-            cnt = 0;
-            for(int n : nums)
-            {
-                if(n <= mid)
-                    ++cnt;
-            }
-            if(cnt <= mid)
-                lb = mid + 1;
-            else
-                ub = mid - 1;    
+            x[i]=0;
         }
-        return lb;
+        int n;
+        for(int i=0;i<s;i++)
+        {
+            n=nums[i];
+            if(x[n-1]!=0)
+            {
+                break;
+            }
+            x[n-1]=1;
+        }
+        return n;
     }
 };
