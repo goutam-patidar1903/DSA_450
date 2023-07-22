@@ -11,7 +11,7 @@ public:
         for(int i=0;i<s;i++)
         {
             n=nums[i];
-            if(x[n-1]!=0)
+            if(x[n-1]==1)
             {
                 break;
             }
