@@ -4,13 +4,13 @@ public:
         if(n==0) return 0;
         if(n<=2) return 1;
         int x=1,y=1;
-        int result;
+        int z=0;
         for(int i=3;i<=n;i++)
         {
-            result=x+y;
+            z=x+y;
             x=y;
-            y=result;
+            y=z;
         }
-        return result;
+        return z;
     }
 };
