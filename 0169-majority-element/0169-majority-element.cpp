@@ -2,14 +2,15 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) {
          unordered_map<int,int> mpp;
-        int maxElement=0,maxCount=0;
-        for(int i=0;i<nums.size();i++)
+        int maxElement=0;
+        int size=nums.size();
+        for(int i=0;i<size;i++)
         {
             mpp[nums[i]]++;
-            if(mpp[nums[i]] > maxCount) 
+            if(mpp[nums[i]] > size/2) 
             {
                 maxElement=nums[i];   
-                maxCount=mpp[nums[i]];
+                return maxElement;
             }
         }
         return maxElement;
