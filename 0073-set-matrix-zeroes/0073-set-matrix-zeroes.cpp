@@ -4,7 +4,6 @@ public:
        
         set<int> row;
         set<int> col;
-        
         int n=matrix.size();
         int m=matrix[0].size();
         
@@ -30,18 +29,6 @@ public:
                }
             }
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         // int n=matrix.size();
