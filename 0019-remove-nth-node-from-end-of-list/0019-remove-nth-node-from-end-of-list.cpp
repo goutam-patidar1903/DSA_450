@@ -18,6 +18,14 @@ public:
             size++;
             tmp1=tmp1->next;
         }
+        
+        if(size==n)
+        {
+            ListNode *newHead=head->next;
+            delete head;
+            return newHead;
+        }
+        
         int index=size-n+1;
 
         ListNode *tmp2=head;
@@ -27,9 +35,7 @@ public:
             tmp2=tmp2->next;
         }
         
-        
-        if(tmp2==head) head=head->next;
-        else tmp1->next=tmp2->next;
+        tmp1->next=tmp2->next;
         delete tmp2;
         return head;
         
