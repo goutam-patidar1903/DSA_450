@@ -22,6 +22,7 @@ public:
 
 bool isPalindrome(ListNode* head) {
     if (head == NULL || head->next == NULL)  return true; 
+    
     ListNode* slow = head;
     ListNode* fast = head;
     while (fast->next != NULL && fast->next->next != NULL) {
@@ -33,14 +34,14 @@ bool isPalindrome(ListNode* head) {
     ListNode* second = newHead; 
     while (second != NULL) {
         if (first->val != second->val) {
-            reverseLinkedList(newHead);  
+           // reverseLinkedList(newHead);  
             return false;
         }
         first = first->next; 
         second = second->next;  
     }
     
-    reverseLinkedList(newHead);  
+    //reverseLinkedList(newHead);  
     
     return true;  
 }
