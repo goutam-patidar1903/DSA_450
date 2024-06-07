@@ -1,13 +1,13 @@
 class Solution {
-    private:
+private:
     int sumByD(vector<int>& nums, int d)
     {
-            int n=nums.size();
-            int sum=0;
-            for(int j=0;j<n;j++)
-            {
-                sum += ceil((double)(nums[j]) / (double)(d));
-            }
+        int n=nums.size();
+        int sum=0;
+        for(int j=0;j<n;j++)
+        {
+        sum += ceil((double)(nums[j]) / (double)(d));
+        }
         return sum;
     }
 public:
