@@ -21,7 +21,7 @@ public:
        
         long long val = m * 1ll * k * 1ll;
         int n = bloomDay.size(); //size of the array
-         if (val > n) return -1; //impossible case.
+        if (val > n) return -1; //impossible case.
         
         int low=*min_element(bloomDay.begin(),bloomDay.end());
         int high=*max_element(bloomDay.begin(),bloomDay.end());
