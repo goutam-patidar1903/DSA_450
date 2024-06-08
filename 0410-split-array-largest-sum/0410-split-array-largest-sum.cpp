@@ -22,13 +22,11 @@ public:
     int splitArray(vector<int>& nums, int k) {
         int low = *max_element(nums.begin(),nums.end());
         int high = accumulate(nums.begin(),nums.end(),0);
-        // int ans=0;
         while(low<=high)
         {
             int mid=(low+high)/2;
             if(isPossible(nums , mid , k)) 
             {
-                // ans=mid;
                 low=mid+1;
             }
             else high=mid-1;
