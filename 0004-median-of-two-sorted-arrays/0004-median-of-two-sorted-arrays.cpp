@@ -28,13 +28,9 @@ public:
         }
         
        int n = size1 + size2;
-    if (n % 2 == 1) {
-        return (double)ans[n / 2];
-    }
+       if (n % 2 == 1) return (double)ans[n / 2];
 
-    double median = ((double)ans[n / 2] + (double)ans[(n / 2) - 1]) / 2.0;
-    return median;
+       return ((double)ans[n / 2] + (double)ans[(n / 2) - 1]) / 2.0;
         
-        // return -1;
     }
 };
