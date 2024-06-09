@@ -16,7 +16,7 @@ long long power(long long a,long long b){
 int countGoodNumbers(long long n) {
     long long ed;
     long long od;
-    if(n&1){
+    if(n%2==1){
         od=n/2;
         ed=(n+1)/2;
     }
