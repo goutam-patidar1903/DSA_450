@@ -1,6 +1,6 @@
 class Solution {
     public:
-    int sum = 0;
+    
     void dfs(vector<int>& cur, int k, int n, int idx, vector<vector<int>>& ans)
     {
         if (cur.size() == k && n==0)
