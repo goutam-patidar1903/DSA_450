@@ -17,8 +17,8 @@ public:
         // Perform the division
         while (n >= d) {
             int count = 0;
-            while (n > (d << (count + 1)))
-                count++;
+            while (n > (d << (count + 1))) { count++;  }
+            
             n -= d << count;
             ans += 1 << count;
         }
