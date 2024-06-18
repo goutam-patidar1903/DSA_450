@@ -8,7 +8,7 @@ class Solution {
         }
         temp.push_back(nums[index]);
         generateSubsets(index+1, temp, nums, ans);
-        temp.erase(find(temp.begin(),temp.end(),nums[index]));
+        temp.pop_back();
         generateSubsets(index+1, temp, nums, ans);
     }
 public:
