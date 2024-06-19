@@ -29,15 +29,12 @@ public:
         //     return x*myPow(x, n-1);
         // }
         
-         long double ans = power(x,n);
+        long double ans = power(x,n);
         long double a = 1;
 
         if(n < 0) {
-            double sol = a / ans;
-
-            return sol;
+            ans = 1 / ans;
         }
-        return ans;
-        
+        return ans;  
     }
 };
