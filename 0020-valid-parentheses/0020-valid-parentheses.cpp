@@ -17,10 +17,10 @@ public:
                 if(s[i]==')' && c=='(') result =true;
                 else if(s[i]=='}' && c=='{') result =true;
                 else if(s[i]==']' && c=='[') result =true;
-                else{ result = false ; break;}
+                else{ return false;}
             }
         }
-        if(!st.empty()) result = false;
+        if(!st.empty()) return false;
         return result;
     }
 };
