@@ -31,17 +31,15 @@ public:
         
 //         return result;
         
-       string ret="";
+        string ans;
         while(!stack.empty()){
-            ret+=stack.top();
-            stack.pop();
+        ans+=stack.top(); 
+        stack.pop();
         }
-        reverse(ret.begin(),ret.end());
-        int a=0;
-        while(ret[a]=='0' && a<ret.size()){
-            a++;
-        }
+        reverse(ans.begin(),ans.end());
+        int pos=0;
+        while(pos<ans.length() && ans[pos]=='0') pos++;
         
-        return (a==ret.size())? "0" : ret.substr(a);
+        return (pos==ans.length())? "0" : ans.substr(pos);
     }
 };
