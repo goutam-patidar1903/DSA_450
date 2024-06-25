@@ -38,6 +38,7 @@ public:
             }
             ans=max(ans,area(heights));
         }
+        
         return ans;
         
     }
