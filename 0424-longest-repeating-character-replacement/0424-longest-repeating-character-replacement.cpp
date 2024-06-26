@@ -10,10 +10,8 @@ public:
                 hash[s[r]-'A']++;
                 mf=max(mf,hash[s[r]-65]);
                 
-                while((r-l+1)-mf > k){
+                if((r-l+1)-mf > k){
                     hash[s[l]-'A'] --;
-                    mf=0;
-                    for(int i=0;i<26;i++) mf=max(mf,hash[i]);
                     l++;
                 }
                 if((r-l+1)-mf <= k) maxLen=max(maxLen,(r-l+1));
