@@ -16,7 +16,7 @@ public:
                     for(int i=0;i<26;i++) mf=max(mf,hash[i]);
                     l++;
                 }
-                maxLen=max(maxLen,(r-l+1));
+                if((r-l+1)-mf <= k) maxLen=max(maxLen,(r-l+1));
                 r++;
             }
         return maxLen;
