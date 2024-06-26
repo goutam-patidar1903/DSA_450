@@ -4,11 +4,11 @@ public:
         int l=0;
         int r=0;
         int maxLen=INT_MIN;
-        int x=k;
+        int zeroCounter=0;
         while(r<nums.size())
         {
-            if(nums[r]==0 && x>0) x--;
-            else if(nums[r]==0 && x==0)
+            if(nums[r]==0 && zeroCounter<k) zeroCounter++;
+            else if(nums[r]==0 && zeroCounter>=k)
             {
                while(l<r && nums[l]!=0) l++;
                 l++;
