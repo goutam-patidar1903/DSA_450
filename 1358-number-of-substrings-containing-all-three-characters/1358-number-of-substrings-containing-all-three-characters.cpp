@@ -11,12 +11,12 @@ public:
             arr[s[r]-'a']++;
             while(arr[0] && arr[1] && arr[2])
             {
-                ans+=(n-r);
+                // ans+=(n-r);
                 arr[s[l]-'a']--;
-                // cnt++;
+                cnt++;
                 l++;
             }
-            // ans+=cnt;
+            ans+=cnt;
             r++;
         }
         return ans;
