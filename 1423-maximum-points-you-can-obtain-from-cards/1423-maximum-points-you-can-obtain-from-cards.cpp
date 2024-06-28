@@ -17,16 +17,16 @@ public:
             leftSum+=cardPoints[left];
             left++;
         }
+        maxSum=leftSum;
         left--;
         while(left>=0)
         {
-            maxSum=max(maxSum,(leftSum+rightSum));
             leftSum-=cardPoints[left];
             rightSum+=cardPoints[right];
+             maxSum=max(maxSum,(leftSum+rightSum));
             left--;
             right--;
         }
-            maxSum=max(maxSum,(leftSum+rightSum));
         
         return maxSum;
     }
