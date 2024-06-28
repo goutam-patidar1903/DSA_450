@@ -2,15 +2,15 @@ class Solution {
 private:    
     int atMost(vector<int>& nums, int goal) {
         if(goal < 0) return 0;
-        int i = 0, j = 0, ans = 0;
+        int l = 0, r= 0, ans = 0;
         long long sum = 0;
         int n = nums.size();
-        for (j = 0; j < n; j++) {
-            sum += nums[j];
+        for (r= 0; r< n; r++) {
+            sum += nums[r];
             while (sum > goal) {
-                sum -= nums[i++];
+                sum -= nums[l++];
             }
-            ans += j - i + 1;
+            ans += r - l + 1;
         }
         return ans;
     }
