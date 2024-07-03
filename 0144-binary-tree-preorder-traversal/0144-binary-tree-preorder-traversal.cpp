@@ -18,7 +18,7 @@ class Solution {
         preT(root->left , ans);
         preT(root->right , ans);
         
-        // return;
+        return;
          
     }
 public:
