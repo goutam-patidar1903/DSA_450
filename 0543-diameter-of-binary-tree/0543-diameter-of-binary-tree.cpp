@@ -25,7 +25,7 @@ public:
         if(!root) return 0;
         int dia=0;
         
-        int h=calculateMaxDia(root,dia);
+        calculateMaxDia(root,dia);
         
         return dia;
         
