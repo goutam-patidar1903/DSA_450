@@ -14,7 +14,7 @@ public:
    bool isPossible(TreeNode* root, long long l, long long r){
     if(root == nullptr)  return true;
     if(root->val < r and root->val > l)
-        return isPossible(root->left, l, root->val) and 
+        return isPossible(root->left, l, root->val) && 
                                 isPossible(root->right, root->val, r);
     else return false;
 }
