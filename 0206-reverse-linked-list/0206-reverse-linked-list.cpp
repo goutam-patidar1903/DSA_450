@@ -11,30 +11,19 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-       // Way 1
-        // if(head==NULL || head->next==NULL) return head;
-        // vector<ListNode *> ptrs;
-        // ListNode *tmp=head;
-        // while(tmp != NULL)
-        // {
-        //     ptrs.push_back(tmp);
-        //     tmp=tmp->next;
-        // }
-        // int left=0;
-        // int right=ptrs.size()-1;
-        // int k;
-        // while(left<right)
-        // {
-        //     k=ptrs[left]->val;
-        //     ptrs[left]->val=ptrs[right]->val;
-        //     ptrs[right]->val=k;
-        //     left++;
-        //     right--;
-        // }
-        // return head;
-        
-        // Way 2
+        // Iterative Approach
         ListNode *tmp=head;
+        // ListNode *prev=NULL;
+        // while(tmp !=NULL)
+        // {
+        //     ListNode *front=tmp->next;
+        //     tmp->next=prev;
+        //     prev=tmp;
+        //     tmp=front;
+        // }
+        // return prev;
+        
+        //Recursive Approach
         ListNode *prev=NULL;
         while(tmp !=NULL)
         {
@@ -44,5 +33,8 @@ public:
             tmp=front;
         }
         return prev;
+        
+        
+        
     }
 };
