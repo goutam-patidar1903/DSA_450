@@ -30,7 +30,7 @@ public:
         // }
         
         long double ans = power(x,n);
-        long double a = 1;
+        // long double a = 1;
 
         if(n < 0) {
             ans = 1 / ans;
