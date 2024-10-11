@@ -37,5 +37,18 @@ public:
         }
 
         return sum;
+        
+//         long long sum=0;
+//         int mini;
+//         for(int i=0;i<length;i++) {
+//             mini = nums[i];
+//             for(int j=i;j<length;j++) {
+//                 mini = min(mini,nums[j]);
+//                 sum=(sum+mini) % MOD;
+//             }
+//         }
+        
+        
+//         return sum;
     }
 };
