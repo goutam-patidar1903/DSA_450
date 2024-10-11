@@ -10,7 +10,7 @@ public:
                 hash[s[r]-'A']++;
                 mf=max(mf,hash[s[r]-65]);
                 
-                if((r-l+1)-mf > k){
+                while((r-l+1)-mf > k){
                     hash[s[l]-'A'] --;
                     l++;
                 }
