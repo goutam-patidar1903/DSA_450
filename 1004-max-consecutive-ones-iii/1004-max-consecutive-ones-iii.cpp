@@ -13,7 +13,7 @@ public:
                while(l<r && nums[l]!=0) l++;
                 l++;
             }
-            // cout<<"l = "<<l<<" & r = "<<r<<" & x = "<<x<<endl ;
+            // cout<<"l = "<<l<<" & r = "<<r<<" & counter = "<<zeroCounter<<endl ;
             maxLen=max(maxLen,(r-l+1));
             r++;
         }
