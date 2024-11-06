@@ -6,5 +6,5 @@ WHERE (employee_id) IN
 (SELECT employee_id 
 FROM Employee
 GROUP BY employee_id
-HAVING COUNT(department_id)=1 OR primary_flag="Y"
+HAVING COUNT(*)=1 OR primary_flag="Y"
 ORDER BY employee_id)
