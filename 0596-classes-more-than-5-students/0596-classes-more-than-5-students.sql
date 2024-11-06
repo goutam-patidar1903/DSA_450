@@ -5,4 +5,4 @@ SELECT
 FROM
     Courses
 GROUP BY class
-HAVING COUNT(DISTINCT student) >= 5;
+HAVING COUNT( student) >= 5;
