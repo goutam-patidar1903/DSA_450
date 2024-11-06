@@ -15,11 +15,8 @@ public:
         if(root==NULL) return;
         
         tmp += to_string(root->val);
-        cout<<"OUT "<<tmp<<endl;
-        if(root->left==NULL && root->right==NULL) {
-           cout<<"In "<<tmp<<endl;
-            ans.push_back(tmp);
-        }
+        
+        if(root->left==NULL && root->right==NULL)   ans.push_back(tmp);
     
         generateAllPath(root->left, ans, tmp+"->");
         generateAllPath(root->right, ans, tmp+"->");
