@@ -35,7 +35,7 @@ public:
     }
 
     // Convert result_set to a vector
-    return std::vector<int>(result_set.begin(), result_set.end());
+    return vector<int>(result_set.begin(), result_set.end());
         
         
     }
