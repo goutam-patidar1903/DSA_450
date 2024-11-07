@@ -24,7 +24,7 @@ public:
         
         
         // optimized code 
-        vector<int > result;
+    vector<int > result;
     unordered_set<int> set_nums2(nums2.begin(), nums2.end()); 
     unordered_set<int> result_set;
 
