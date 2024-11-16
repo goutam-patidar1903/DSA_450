@@ -8,9 +8,9 @@ public:
             while(r<s.length())
             {
                 hash[s[r]-'A']++;
-                mf=max(mf,hash[s[r]-65]);
+                mf=max(mf,hash[s[r]-'A']);
                 
-                while((r-l+1)-mf > k){
+                if((r-l+1)-mf > k){
                     hash[s[l]-'A'] --;
                     l++;
                 }
